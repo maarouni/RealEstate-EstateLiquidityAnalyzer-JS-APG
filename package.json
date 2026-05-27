@@ -2,7 +2,7 @@
   "name": "realestate-estateliquidityanalyzer-apg",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://maarouni.github.io/RealEstate-EstateLiquidityAnalyzer-APG",
+  "homepage": "https://maarouni.github.io/RealEstate-EstateLiquidityAnalyzer-JS-APG",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
