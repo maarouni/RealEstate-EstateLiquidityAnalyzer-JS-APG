@@ -121,7 +121,7 @@ function GateScreen({ onAuth }) {
           <form onSubmit={e=>{e.preventDefault();
             if(pwd===APP_PASSWORD){setStep("pin");setPwdErr("");}
             else setPwdErr("❌ Incorrect password.");}}>
-            <input type="password" placeholder="Access password" value={pwd}
+            <input type="password" placeholder="Access password" value={pwd} autoComplete="current-password" name="password"
               onChange={e=>setPwd(e.target.value)} autoComplete="current-password" style={iStyle}/>
             {pwdErr && <div style={{color:C.red,fontSize:12,marginBottom:8}}>{pwdErr}</div>}
             <button type="submit" style={bStyle}>Continue →</button>
@@ -131,7 +131,7 @@ function GateScreen({ onAuth }) {
           <form onSubmit={e=>{e.preventDefault();
             const name=PIN_TO_NAME[pin.trim()];
             if(name) onAuth(name); else setPinErr("❌ Incorrect PIN.");}}>
-            <input type="password" placeholder="Your PIN" value={pin}
+            <input type="password" placeholder="Your PIN" value={pin} autoComplete="one-time-code" name="pin"
               onChange={e=>setPin(e.target.value)} maxLength={4} inputMode="numeric" style={iStyle}/>
             {pinErr && <div style={{color:C.red,fontSize:12,marginBottom:8}}>{pinErr}</div>}
             <button type="submit" style={bStyle}>Access Analyzer →</button>
