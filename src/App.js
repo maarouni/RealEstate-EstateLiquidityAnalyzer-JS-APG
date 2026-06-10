@@ -728,11 +728,11 @@ borderRadius:4,padding:"2px 8px",color:rCol,fontSize:11}}>{s.risk}</span>
 </div>
 <div style={{fontSize:11,color:C.muted,marginTop:8}}>
 Best outcome: <strong style={{color:C.white}}>
-{[...scenarios].sort((a,b)=>b.legacy-a.legacy||b.insurance-a.insurance)[0].name}
+{[...scenarios].sort((a,b)=>b.legacy-a.legacy||b.insOffset-a.insOffset)[0].name}
 </strong> — Settlement Costs{" "}
-{fmt([...scenarios].sort((a,b)=>b.legacy-a.legacy||b.insurance-a.insurance)[0].totalCosts)} |{" "}
+{fmt([...scenarios].sort((a,b)=>b.legacy-a.legacy||b.insOffset-a.insOffset)[0].totalCosts)} |{" "}
 Legacy to Heirs{" "}
-{fmt([...scenarios].sort((a,b)=>b.legacy-a.legacy||b.insurance-a.insurance)[0].legacy)}
+{fmt([...scenarios].sort((a,b)=>b.legacy-a.legacy||b.insOffset-a.insOffset)[0].legacy)}
 </div>
 </div>
 
