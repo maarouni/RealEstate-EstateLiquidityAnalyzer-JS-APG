@@ -510,6 +510,14 @@ Signed July 4, 2025. 40% rate unchanged. All calculations reflect current 2026 l
 Step 1 — Client Profile
 </SectionHeader>
 
+<div style={{background:"#0d2010",borderRadius:8,padding:"10px 16px",
+border:"1px solid rgba(46,204,138,0.4)",marginBottom:16,display:"flex",alignItems:"center",gap:10}}>
+<span style={{fontSize:16}}>🔒</span>
+<span style={{fontSize:12,color:"#2ECC8A"}}>
+<strong>Privacy Notice:</strong> Your client's data is never transmitted or stored. All calculations run locally in your browser. Nothing is saved to any server — closing this tab clears all data completely.
+</span>
+</div>
+
 <div style={{background:C.panel,borderRadius:10,padding:"16px 20px",
 border:`1px solid ${C.border}`,marginBottom:20}}>
 <div style={{fontSize:13,color:C.blue,fontWeight:700,marginBottom:14}}>
@@ -795,22 +803,7 @@ Continue to Step 3 →
 Step 3 — Send Illustration Summary
 </SectionHeader>
 
-<div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:20,marginBottom:20}}>
-<div style={{background:C.panel,borderRadius:10,padding:"16px",border:`1px solid ${C.border}`}}>
-<div style={{fontSize:13,color:C.blue,fontWeight:700,marginBottom:12}}>📧 Email to Client</div>
-<TextInput label="Client Email Address" value={clientEmail}
-onChange={setClientEmail} placeholder="client@email.com"/>
-<button onClick={()=>{
-if(!clientEmail) return;
-const subj = encodeURIComponent(`Your Estate Liquidity Illustration — ${today}`);
-const body = encodeURIComponent(emailBody);
-window.open(`mailto:${clientEmail}?subject=${subj}&body=${body}`);
-}} style={{width:"100%",padding:"11px",background:C.blue,border:"none",
-color:C.white,borderRadius:8,cursor:"pointer",fontSize:13,fontWeight:700}}>
-📤 Open Email to Client
-</button>
-</div>
-
+<div style={{marginBottom:20}}>
 <div style={{background:C.panel,borderRadius:10,padding:"16px",border:`1px solid ${C.border}`}}>
 <div style={{fontSize:13,color:C.blue,fontWeight:700,marginBottom:12}}>📧 Email to NYL APG Team</div>
 <TextInput label="APG Email Address" value={apgEmail} onChange={setApgEmail}/>
