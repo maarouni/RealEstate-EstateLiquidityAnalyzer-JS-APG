@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from "react";
 
 // ─── Access Control ───────────────────────────────────────────────────────────
-const APP_PASSWORD = "Estate-Liquidity1!";
-const USER_PINS = { masoud:"2025", aaron:"4286", tom:"8891", advisor1:"3317", advisor2:"5529" };
+import { APP_PASSWORD, USER_PINS } from "./secrets";
 const PIN_TO_NAME = Object.fromEntries(Object.entries(USER_PINS).map(([n,p])=>[p,n]));
 
 // ─── Colors ───────────────────────────────────────────────────────────────────
